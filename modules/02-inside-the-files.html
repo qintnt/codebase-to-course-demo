@@ -1,0 +1,189 @@
+<section class="module" id="module-2" style="background: var(--color-bg-warm);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">02</span>
+    <h2 class="module-title">Inside the Files</h2>
+    <p class="module-subtitle">Two parts: instructions (SKILL.md) and raw materials (references/). Like a recipe book plus the pantry.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Big Picture</h3>
+    <p>This skill is organized like a <strong>metaphor library</strong> would be: one master instruction file, and a folder full of reusable components.</p>
+
+    <div class="file-tree animate-in">
+      <div class="ft-folder">
+        <span class="ft-name">codebase-to-course/</span>
+        <span class="ft-desc">The skill root</span>
+        <div class="ft-children">
+          <div class="ft-file">
+            <span class="ft-name">SKILL.md</span>
+            <span class="ft-desc">Main instructions — the "recipe"</span>
+          </div>
+          <div class="ft-folder">
+            <span class="ft-name">references/</span>
+            <span class="ft-desc">Reusable building blocks</span>
+            <div class="ft-children">
+              <div class="ft-file">
+                <span class="ft-name">styles.css</span>
+                <span class="ft-desc">Complete design system — 600+ lines</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">main.js</span>
+                <span class="ft-desc">Interactive engine — quizzes, chat, animations</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">_base.html</span>
+                <span class="ft-desc">HTML shell template with placeholders</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">_footer.html</span>
+                <span class="ft-desc">Closing HTML tags</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">build.sh</span>
+                <span class="ft-desc">One-liner that assembles index.html</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">interactive-elements.md</span>
+                <span class="ft-desc">HTML patterns for every component</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">design-system.md</span>
+                <span class="ft-desc">CSS tokens, colors, typography guide</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">content-philosophy.md</span>
+                <span class="ft-desc">Rules for writing course content</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">gotchas.md</span>
+                <span class="ft-desc">Common pitfalls to avoid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">SKILL.md — The Brain</h3>
+    <p>The main instruction file is <strong>17KB of detailed guidance</strong>. It tells the AI:</p>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Phase 1: Read the Codebase</strong>
+          <p>Trace data flows, identify components, map how everything connects</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Phase 2: Design the Curriculum</strong>
+          <p>Structure 4-6 modules from user-facing behavior down to internals</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Phase 3: Build the Course</strong>
+          <p>Write module HTML using the reference files — never regenerate CSS/JS</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Phase 4: Assemble and Review</strong>
+          <p>Run build.sh, open the result, check for quality</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See How It Works</h3>
+    <p>Here's a real snippet from <span class="term" data-definition="build.sh is a tiny shell script that concatenates HTML parts together to create the final course page.">build.sh</span> — it's just 4 lines, but it's the whole assembly process:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">build.sh</span>
+<pre><code><span class="code-line"><span class="code-keyword">#!/bin/bash</span></span>
+<span class="code-line">set -e</span>
+<span class="code-line"><span class="code-keyword">cat</span> _base.html modules/*.html \</span>
+<span class="code-line">  _footer.html > index.html</span>
+<span class="code-line"><span class="code-function">echo</span> <span class="code-string">"Built index.html"</span></span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Run this as a shell script.</p>
+          <p class="tl">Stop immediately if any command fails.</p>
+          <p class="tl">Take the HTML shell, all module files, and the footer, and glue them together...</p>
+          <p class="tl">...into a single index.html file.</p>
+          <p class="tl">Print a success message.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">What Each Reference File Does</h3>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">🎨</div>
+        <h4 class="pattern-title">styles.css</h4>
+        <p class="pattern-desc">Complete design system with CSS variables, typography, animations. Never regenerate it.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">⚡</div>
+        <h4 class="pattern-title">main.js</h4>
+        <p class="pattern-desc">Interactive engine: navigation, quizzes, chat animations, drag-and-drop. Auto-detects components by class name.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">📋</div>
+        <h4 class="pattern-title">interactive-elements.md</h4>
+        <p class="pattern-desc">HTML recipes for every interactive component — copy these patterns when writing modules.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">🎯</div>
+        <h4 class="pattern-title">gotchas.md</h4>
+        <p class="pattern-desc">Common mistakes like tooltip clipping, walls of text, missing quizzes. Read before shipping.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Match the Files</h3>
+    <div class="dnd-container">
+      <div class="dnd-chips">
+        <div class="dnd-chip" draggable="true" data-answer="styles">styles.css</div>
+        <div class="dnd-chip" draggable="true" data-answer="engine">main.js</div>
+        <div class="dnd-chip" draggable="true" data-answer="gotchas">gotchas.md</div>
+      </div>
+      <div class="dnd-zones">
+        <div class="dnd-zone" data-correct="engine">
+          <p class="dnd-zone-label">Runs all interactivity (quizzes, chat, flow animations)</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+        <div class="dnd-zone" data-correct="styles">
+          <p class="dnd-zone-label">Defines the entire visual design system</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+        <div class="dnd-zone" data-correct="gotchas">
+          <p class="dnd-zone-label">Lists common pitfalls to check before shipping</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+      </div>
+      <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3);">
+        <button class="btn btn-primary" onclick="checkDnD()">Check</button>
+        <button class="btn" onclick="resetDnD()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>

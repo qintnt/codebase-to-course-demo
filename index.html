@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How codebase-to-course Works</title>
+
+  <!-- Google Fonts: Bricolage Grotesque · DM Sans · JetBrains Mono -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,700;12..96,800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400;1,9..40,500&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+
+  <style>
+    :root {
+      --color-accent:       #2A7B9B;
+      --color-accent-hover: #1F6280;
+      --color-accent-light: #E4F2F7;
+      --color-accent-muted: #5A9DB8;
+    }
+  </style>
+
+  <script src="main.js" defer></script>
+</head>
+<body>
+
+  <nav class="nav" id="nav">
+    <div class="progress-bar" id="progress-bar" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+    <div class="nav-inner">
+      <span class="nav-title">How codebase-to-course Works</span>
+      <div class="nav-dots" id="nav-dots" role="tablist">
+        <button class="nav-dot" data-target="module-1" data-tooltip="What Is It?" role="tab" aria-label="Module 1: What Is It?"></button>
+        <button class="nav-dot" data-target="module-2" data-tooltip="Inside the Files" role="tab" aria-label="Module 2: Inside the Files"></button>
+        <button class="nav-dot" data-target="module-3" data-tooltip="The Build Process" role="tab" aria-label="Module 3: The Build Process"></button>
+        <button class="nav-dot" data-target="module-4" data-tooltip="Design Philosophy" role="tab" aria-label="Module 4: Design Philosophy"></button>
+        <button class="nav-dot" data-target="module-5" data-tooltip="The Interactive Engine" role="tab" aria-label="Module 5: The Interactive Engine"></button>
+      </div>
+    </div>
+  </nav>
+
+  <main id="main">
+    <!-- modules/*.html content is assembled here by build.sh -->
+<section class="module" id="module-1" style="background: var(--color-bg);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">01</span>
+    <h2 class="module-title">What Is This Thing?</h2>
+    <p class="module-subtitle">A skill that reads code and writes a beautiful, interactive course — so anyone can understand how software works.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Imagine This</h3>
+    <p>You find a cool project on GitHub. It works. But looking at the code feels like staring at a foreign language.</p>
+    <p>This skill fixes that. It <strong>reads the codebase</strong>, figures out how everything connects, and writes a <strong>beautiful interactive course</strong> — complete with animations, quizzes, and plain-English code explanations.</p>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">💡</div>
+      <div class="callout-content">
+        <strong class="callout-title">Key Insight</strong>
+        <p>This is <em>meta</em> — the course you're looking at right now was built by this very skill. It reads its own source code and taught you how it works. 🤯</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Who It's For</h3>
+    <p>The target audience is <strong>"vibe coders"</strong> — people who build software by telling AI tools what they want, without a traditional computer science background.</p>
+
+    <div class="icon-rows">
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-1)">🧭</div>
+        <div>
+          <strong>Steer AI Better</strong>
+          <p>Understand architecture so you can give smarter instructions</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-2)">🔍</div>
+        <div>
+          <strong>Spot AI Mistakes</strong>
+          <p>Know when the AI is hallucinating or using bad patterns</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-3)">🐛</div>
+        <div>
+          <strong>Debug When Stuck</strong>
+          <p>Break out of bug loops when the AI goes in circles</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-4)">💬</div>
+        <div>
+          <strong>Talk to Engineers</strong>
+          <p>Build vocabulary so you can discuss decisions confidently</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">What You Get</h3>
+    <p>The output is a <strong>single HTML file</strong> — no dependencies, no setup, works offline. Here's what's inside:</p>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Scroll-Based Modules</strong>
+          <p>Content organized into chapters with smooth scrolling navigation</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Code ↔ English Translations</strong>
+          <p>Real code on the left, plain English on the right — side by side</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Interactive Quizzes</strong>
+          <p>Test understanding with instant feedback, not memorization</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Animated Visualizations</strong>
+          <p>See how components talk to each other with chat and flow animations</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Quick Quiz</h3>
+    <div class="quiz-container" id="quiz-m1">
+      <div class="quiz-question-block"
+           data-correct="option-b"
+           data-explanation-right="Exactly! The whole point is to help non-technical people understand code through visual, interactive learning."
+           data-explanation-wrong="Not quite — think about who this skill is really trying to help.">
+        <h3 class="quiz-question">What is the primary goal of codebase-to-course?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="option-a" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>Teach people to write code from scratch</span>
+          </button>
+          <button class="quiz-option" data-value="option-b" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>Help non-technical people understand how existing code works</span>
+          </button>
+          <button class="quiz-option" data-value="option-c" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>Generate documentation for engineering teams</span>
+          </button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+      <button class="quiz-check-btn" onclick="checkQuiz('quiz-m1')">Check Answer</button>
+      <button class="quiz-reset-btn" onclick="resetQuiz('quiz-m1')">Try Again</button>
+    </div>
+  </div>
+
+</div>
+</section>
+<section class="module" id="module-2" style="background: var(--color-bg-warm);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">02</span>
+    <h2 class="module-title">Inside the Files</h2>
+    <p class="module-subtitle">Two parts: instructions (SKILL.md) and raw materials (references/). Like a recipe book plus the pantry.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Big Picture</h3>
+    <p>This skill is organized like a <strong>metaphor library</strong> would be: one master instruction file, and a folder full of reusable components.</p>
+
+    <div class="file-tree animate-in">
+      <div class="ft-folder">
+        <span class="ft-name">codebase-to-course/</span>
+        <span class="ft-desc">The skill root</span>
+        <div class="ft-children">
+          <div class="ft-file">
+            <span class="ft-name">SKILL.md</span>
+            <span class="ft-desc">Main instructions — the "recipe"</span>
+          </div>
+          <div class="ft-folder">
+            <span class="ft-name">references/</span>
+            <span class="ft-desc">Reusable building blocks</span>
+            <div class="ft-children">
+              <div class="ft-file">
+                <span class="ft-name">styles.css</span>
+                <span class="ft-desc">Complete design system — 600+ lines</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">main.js</span>
+                <span class="ft-desc">Interactive engine — quizzes, chat, animations</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">_base.html</span>
+                <span class="ft-desc">HTML shell template with placeholders</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">_footer.html</span>
+                <span class="ft-desc">Closing HTML tags</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">build.sh</span>
+                <span class="ft-desc">One-liner that assembles index.html</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">interactive-elements.md</span>
+                <span class="ft-desc">HTML patterns for every component</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">design-system.md</span>
+                <span class="ft-desc">CSS tokens, colors, typography guide</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">content-philosophy.md</span>
+                <span class="ft-desc">Rules for writing course content</span>
+              </div>
+              <div class="ft-file">
+                <span class="ft-name">gotchas.md</span>
+                <span class="ft-desc">Common pitfalls to avoid</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">SKILL.md — The Brain</h3>
+    <p>The main instruction file is <strong>17KB of detailed guidance</strong>. It tells the AI:</p>
+
+    <div class="step-cards">
+      <div class="step-card">
+        <div class="step-num">1</div>
+        <div class="step-body">
+          <strong>Phase 1: Read the Codebase</strong>
+          <p>Trace data flows, identify components, map how everything connects</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">2</div>
+        <div class="step-body">
+          <strong>Phase 2: Design the Curriculum</strong>
+          <p>Structure 4-6 modules from user-facing behavior down to internals</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">3</div>
+        <div class="step-body">
+          <strong>Phase 3: Build the Course</strong>
+          <p>Write module HTML using the reference files — never regenerate CSS/JS</p>
+        </div>
+      </div>
+      <div class="step-card">
+        <div class="step-num">4</div>
+        <div class="step-body">
+          <strong>Phase 4: Assemble and Review</strong>
+          <p>Run build.sh, open the result, check for quality</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See How It Works</h3>
+    <p>Here's a real snippet from <span class="term" data-definition="build.sh is a tiny shell script that concatenates HTML parts together to create the final course page.">build.sh</span> — it's just 4 lines, but it's the whole assembly process:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">build.sh</span>
+<pre><code><span class="code-line"><span class="code-keyword">#!/bin/bash</span></span>
+<span class="code-line">set -e</span>
+<span class="code-line"><span class="code-keyword">cat</span> _base.html modules/*.html \</span>
+<span class="code-line">  _footer.html > index.html</span>
+<span class="code-line"><span class="code-function">echo</span> <span class="code-string">"Built index.html"</span></span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Run this as a shell script.</p>
+          <p class="tl">Stop immediately if any command fails.</p>
+          <p class="tl">Take the HTML shell, all module files, and the footer, and glue them together...</p>
+          <p class="tl">...into a single index.html file.</p>
+          <p class="tl">Print a success message.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">What Each Reference File Does</h3>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">🎨</div>
+        <h4 class="pattern-title">styles.css</h4>
+        <p class="pattern-desc">Complete design system with CSS variables, typography, animations. Never regenerate it.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">⚡</div>
+        <h4 class="pattern-title">main.js</h4>
+        <p class="pattern-desc">Interactive engine: navigation, quizzes, chat animations, drag-and-drop. Auto-detects components by class name.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">📋</div>
+        <h4 class="pattern-title">interactive-elements.md</h4>
+        <p class="pattern-desc">HTML recipes for every interactive component — copy these patterns when writing modules.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">🎯</div>
+        <h4 class="pattern-title">gotchas.md</h4>
+        <p class="pattern-desc">Common mistakes like tooltip clipping, walls of text, missing quizzes. Read before shipping.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Match the Files</h3>
+    <div class="dnd-container">
+      <div class="dnd-chips">
+        <div class="dnd-chip" draggable="true" data-answer="styles">styles.css</div>
+        <div class="dnd-chip" draggable="true" data-answer="engine">main.js</div>
+        <div class="dnd-chip" draggable="true" data-answer="gotchas">gotchas.md</div>
+      </div>
+      <div class="dnd-zones">
+        <div class="dnd-zone" data-correct="engine">
+          <p class="dnd-zone-label">Runs all interactivity (quizzes, chat, flow animations)</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+        <div class="dnd-zone" data-correct="styles">
+          <p class="dnd-zone-label">Defines the entire visual design system</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+        <div class="dnd-zone" data-correct="gotchas">
+          <p class="dnd-zone-label">Lists common pitfalls to check before shipping</p>
+          <div class="dnd-zone-target">Drop here</div>
+        </div>
+      </div>
+      <div style="margin-top: var(--space-4); display: flex; gap: var(--space-3);">
+        <button class="btn btn-primary" onclick="checkDnD()">Check</button>
+        <button class="btn" onclick="resetDnD()">Reset</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+<section class="module" id="module-3" style="background: var(--color-bg);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">03</span>
+    <h2 class="module-title">The Build Process</h2>
+    <p class="module-subtitle">Four phases from raw code to beautiful course. Think of it like cooking: prep, plan, cook, serve.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Four Phases</h3>
+    <p>Every course goes through the same journey:</p>
+
+    <div class="flow-steps animate-in">
+      <div class="flow-step">
+        <div class="flow-step-num">1</div>
+        <p><strong>Analyze</strong><br>Read every file</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">2</div>
+        <p><strong>Design</strong><br>Plan the modules</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">3</div>
+        <p><strong>Build</strong><br>Write HTML modules</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">4</div>
+        <p><strong>Assemble</strong><br>Cat → index.html</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 1: Analyze the Codebase</h3>
+    <p>Before writing anything, the skill <strong>deeply reads the target codebase</strong>. It's like a detective studying a crime scene:</p>
+
+    <div class="icon-rows">
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-1)">🕵️</div>
+        <div>
+          <strong>Identify the Actors</strong>
+          <p>What are the main components, services, and modules?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-2)">🔗</div>
+        <div>
+          <strong>Trace Data Flows</strong>
+          <p>How does information move between parts?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-3)">🗺️</div>
+        <div>
+          <strong>Map the User Journey</strong>
+          <p>What happens end-to-end when someone uses the app?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-4)">🧩</div>
+        <div>
+          <strong>Find the Clever Bits</strong>
+          <p>Caching, lazy loading, error handling — the patterns worth teaching</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info animate-in">
+      <div class="callout-icon">🤖</div>
+      <div class="callout-content">
+        <strong class="callout-title">AI Behavior</strong>
+        <p>The skill figures out what the app does by reading the README and entry points. It doesn't ask the user — they may not know either!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 2: Design the Curriculum</h3>
+    <p>The course is structured as <strong>4-6 modules</strong> that zoom in progressively:</p>
+
+    <div class="chat-window" id="chat-curriculum">
+      <div class="chat-messages">
+        <div class="chat-message" style="display:none" data-msg="0" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-1)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-1)">Design Phase</span>
+            <p>Module 1: What does this app do? Start with the user experience.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="1" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-2)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-2)">Design Phase</span>
+            <p>Module 2: Meet the components — who are the actors?</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="2" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">Design Phase</span>
+            <p>Module 3: How do the pieces talk to each other?</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="3" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-4)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-4)">Design Phase</span>
+            <p>Module 4-6: External APIs, clever patterns, debugging tips.</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-typing" id="chat-typing" style="display:none">
+        <div class="chat-avatar" id="chat-curriculum-typing-avatar">?</div>
+        <div class="chat-typing-dots">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+      <div class="chat-controls">
+        <button class="btn chat-next-btn">Next</button>
+        <button class="btn chat-all-btn">Play All</button>
+        <button class="btn chat-reset-btn">Replay</button>
+        <span class="chat-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 3: Build — Sequential vs Parallel</h3>
+    <p>Here's where it gets clever. The skill chooses its strategy based on complexity:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">SKILL.md</span>
+<pre><code><span class="code-line"><span class="code-keyword">Simple</span> codebase → <span class="code-keyword">sequential</span></span>
+<span class="code-line">  Write modules one at a time</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-keyword">Complex</span> codebase → <span class="code-keyword">parallel</span></span>
+<span class="code-line">  Write module briefs first</span>
+<span class="code-line">  Dispatch to sub-agents</span>
+<span class="code-line">  Batch of up to 3 at once</span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Small, simple projects get the straightforward approach...</p>
+          <p class="tl">The AI writes each module in order, checking quality as it goes.</p>
+          <p class="tl"></p>
+          <p class="tl">Big, complex projects trigger the smart approach...</p>
+          <p class="tl">Write briefs for each module first, so writing agents never need to re-read the whole codebase.</p>
+          <p class="tl">Then split the work across multiple AI sub-agents — up to 3 at the same time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See the Data Flow</h3>
+    <p>Here's how the build process actually works step by step:</p>
+
+    <div class="flow-animation" data-steps='[
+  {"highlight":"flow-actor-1","label":"You point it at a codebase"},
+  {"highlight":"flow-actor-1","packet":true,"from":"actor-1","to":"actor-2","label":"The skill reads all the source files"},
+  {"highlight":"flow-actor-2","label":"The AI analyzes and designs the curriculum"},
+  {"highlight":"flow-actor-2","packet":true,"from":"actor-2","to":"actor-3","label":"It writes module HTML files"},
+  {"highlight":"flow-actor-3","label":"build.sh assembles everything into index.html"},
+  {"highlight":"flow-actor-3","label":"You open it in your browser — done!"}
+]'>
+      <div class="flow-actors">
+        <div class="flow-actor" id="flow-actor-1">
+          <div class="flow-actor-icon">👤</div>
+          <span>You</span>
+        </div>
+        <div class="flow-actor" id="flow-actor-2">
+          <div class="flow-actor-icon">🤖</div>
+          <span>The Skill</span>
+        </div>
+        <div class="flow-actor" id="flow-actor-3">
+          <div class="flow-actor-icon">📚</div>
+          <span>The Course</span>
+        </div>
+      </div>
+      <div class="flow-packet" id="flow-packet"></div>
+      <div class="flow-step-label" id="flow-label">Click "Next Step" to begin</div>
+      <div class="flow-controls">
+        <button class="btn flow-next-btn">Next Step</button>
+        <button class="btn flow-reset-btn">Restart</button>
+        <span class="flow-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 4: Assemble & Review</h3>
+    <p>The final step is dead simple — run <code>bash build.sh</code> and it concatenates:</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-1)">_base.html</div>
+        <p>HTML shell with fonts, CSS, JS links</p>
+      </div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-2)">modules/*.html</div>
+        <p>Each module's content in order</p>
+      </div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-3)">_footer.html</div>
+        <p>Closing body and html tags</p>
+      </div>
+      <div class="flow-arrow">=</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-success)">index.html</div>
+        <p>The complete course!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+<section class="module" id="module-4" style="background: var(--color-bg-warm);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">04</span>
+    <h2 class="module-title">Design Philosophy</h2>
+    <p class="module-subtitle">Warm, visual, metaphor-rich. Everything designed for someone who's never opened a code file.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Build First, Understand Later</h3>
+    <p>This skill <strong>inverts traditional education</strong>. Instead of years of theory before touching real code, you start with something that already works — then peel back the layers.</p>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">🏗️</div>
+      <div class="callout-content">
+        <strong class="callout-title">The Metaphor</strong>
+        <p>Think of it like taking apart a watch. You already know it tells time. Now you open it up to see the gears — each one makes sense in context because you know what the whole thing does.</p>
+      </div>
+    </div>
+
+    <div class="flow-steps animate-in">
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-error)">❌</div>
+        <p><strong>Old Way</strong><br>Memorize concepts → maybe build something → most people quit</p>
+      </div>
+      <div class="flow-arrow">vs</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-success)">✅</div>
+        <p><strong>This Way</strong><br>Build something → see it work → now understand the how</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Show, Don't Tell</h3>
+    <p>Every screen is at least <strong>50% visual</strong>. Text blocks are limited to 2-3 sentences. If something can be a diagram, animation, or interactive element — it shouldn't be a paragraph.</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">The Rule</span>
+<pre><code><span class="code-line"><span class="code-comment">// ❌ BAD — wall of text</span></span>
+<span class="code-line">The extension consists of multiple</span>
+<span class="code-line">files including a manifest, content</span>
+<span class="code-line">script, service worker, popup HTML...</span>
+<span class="code-line"><span class="code-comment">// (20 more lines of explanation)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// ✅ GOOD — use a file tree</span></span>
+<span class="code-line"><span class="code-keyword">Use</span> <span class="code-function">visual file tree</span></span>
+<span class="code-line"><span class="code-keyword">with</span> <span class="code-string">descriptions</span></span>
+<span class="code-line"><span class="code-keyword">instead</span> <span class="code-keyword">of</span> <span class="code-string">paragraphs</span></span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">WHY THIS MATTERS</span>
+        <div class="translation-lines">
+          <p class="tl">Dense paragraphs overwhelm non-technical readers. They look like homework.</p>
+          <p class="tl"></p>
+          <p class="tl">Visual structures like file trees let readers scan and understand in seconds.</p>
+          <p class="tl">The gotchas.md file literally lists "Walls of Text" as the #1 mistake to avoid.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Design Identity</h3>
+    <p>The visual style has <strong>strong opinions</strong> — no generic purple gradients:</p>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">🌅</div>
+        <h4 class="pattern-title">Warm Palette</h4>
+        <p class="pattern-desc">Off-white backgrounds like aged paper, warm grays. Feels like a developer's notebook.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">✏️</div>
+        <h4 class="pattern-title">Distinctive Type</h4>
+        <p class="pattern-desc">Bricolage Grotesque for headings — bold and geometric. Never Inter or Roboto.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">🎯</div>
+        <h4 class="pattern-title">One Accent Color</h4>
+        <p class="pattern-desc">Vermillion, coral, teal, amber, or forest. One confident accent, not a rainbow.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">💻</div>
+        <h4 class="pattern-title">Dark Code Blocks</h4>
+        <p class="pattern-desc">Catppuccin-inspired syntax highlighting on deep indigo-charcoal. Feels like a real IDE.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">No Recycled Metaphors</h3>
+    <p>Each concept gets a <strong>unique metaphor</strong> that fits organically. The "restaurant" metaphor is banned — it's been overused to death.</p>
+
+    <div class="badge-list animate-in">
+      <div class="badge-item">
+        <code class="badge-code">Database</code>
+        <span class="badge-desc">→ A library with a card catalog system</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Authentication</code>
+        <span class="badge-desc">→ A bouncer checking IDs at the door</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Rate Limiting</code>
+        <span class="badge-desc">→ A nightclub with a capacity limit</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Cache</code>
+        <span class="badge-desc">→ Keeping leftovers instead of cooking every meal from scratch</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Quizzes Test Doing, Not Knowing</h3>
+    <p>No "What does API stand for?" Instead:</p>
+
+    <div class="scenario-block">
+      <div class="scenario-context">
+        <span class="scenario-label">Real Quiz Style</span>
+        <p>A user reports stale data after switching pages. Where would you look first?</p>
+      </div>
+    </div>
+
+    <div class="callout callout-warning animate-in">
+      <div class="callout-icon">⚠️</div>
+      <div class="callout-content">
+        <strong class="callout-title">Original Code Only</strong>
+        <p>Code snippets are <strong>never modified or simplified</strong>. The learner should be able to open the actual file and see the exact same code they learned from. This builds real confidence.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
+<section class="module" id="module-5" style="background: var(--color-bg);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">05</span>
+    <h2 class="module-title">The Interactive Engine</h2>
+    <p class="module-subtitle">A single 14KB JavaScript file powers every quiz, animation, and interaction. No frameworks, no dependencies.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">One File Does Everything</h3>
+    <p>The entire interactive experience is driven by <span class="term" data-definition="main.js is a single JavaScript file that handles all interactivity — navigation, quizzes, chat animations, drag-and-drop, flow animations, and more.">main.js</span>. It doesn't use React, Vue, or any framework. Just vanilla JavaScript with smart auto-detection:</p>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">📍</div>
+        <h4 class="pattern-title">Auto-Detect</h4>
+        <p class="pattern-desc">Scans the page for class names like .chat-window, .flow-animation, .quiz-container — and activates the right engine for each.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">🎬</div>
+        <h4 class="pattern-title">Scroll Animations</h4>
+        <p class="pattern-desc">IntersectionObserver reveals content as you scroll down, with staggered children animations.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">📖</div>
+        <h4 class="pattern-title">Glossary Tooltips</h4>
+        <p class="pattern-desc">position: fixed tooltips appended to document.body so they're never clipped by overflow containers.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">📱</div>
+        <h4 class="pattern-title">Mobile Support</h4>
+        <p class="pattern-desc">Touch events for drag-and-drop, responsive grid layouts, mobile-first design throughout.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">How Auto-Detection Works</h3>
+    <p>The skill uses <span class="term" data-definition="querySelectorAll is a built-in browser function that finds all HTML elements matching a CSS selector — like finding all elements with a certain class name.">querySelectorAll</span> to find components by their class name and wire them up automatically:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">main.js</span>
+<pre><code><span class="code-line"><span class="code-comment">// Find every chat window</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.chat-window'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initChat</span>(el));</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// Find every flow animation</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.flow-animation'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initFlow</span>(el));</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// Find every drag-and-drop</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.dnd-container'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initDnD</span>(el));</span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Find every element with the "chat window" class...</p>
+          <p class="tl">...and run the chat engine on each one.</p>
+          <p class="tl"></p>
+          <p class="tl">Find every flow animation element...</p>
+          <p class="tl">...and initialize the flow animation engine.</p>
+          <p class="tl"></p>
+          <p class="tl">Same pattern for drag-and-drop containers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See It in Action — Chat Engine</h3>
+    <p>The group chat engine creates an iMessage-style conversation between components. Watch:</p>
+
+    <div class="chat-window" id="chat-engine-demo">
+      <div class="chat-messages">
+        <div class="chat-message" style="display:none" data-msg="0" data-sender="html">
+          <div class="chat-avatar" style="background: var(--color-actor-1)">H</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-1)">HTML Structure</span>
+            <p>I define the layout and content. I'm the skeleton.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="1" data-sender="css">
+          <div class="chat-avatar" style="background: var(--color-actor-2)">C</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-2)">CSS Styles</span>
+            <p>I take that skeleton and make it beautiful. Colors, spacing, animations — all me.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="2" data-sender="js">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">J</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">JavaScript Engine</span>
+            <p>And I bring it alive! I scan for my class names, wire up event listeners, and make everything interactive.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="3" data-sender="js">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">J</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">JavaScript Engine</span>
+            <p>Best part? I don't need you to call me. I auto-detect everything on page load. Just drop the right class name and I handle it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-typing" id="chat-typing" style="display:none">
+        <div class="chat-avatar" id="chat-engine-demo-typing-avatar">?</div>
+        <div class="chat-typing-dots">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+      <div class="chat-controls">
+        <button class="btn chat-next-btn">Next</button>
+        <button class="btn chat-all-btn">Play All</button>
+        <button class="btn chat-reset-btn">Replay</button>
+        <span class="chat-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Never Regenerate CSS or JS</h3>
+    <p>One of the most important rules in the skill:</p>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">🔒</div>
+      <div class="callout-content">
+        <strong class="callout-title">Critical Rule</strong>
+        <p>The AI <strong>never regenerates</strong> <code>styles.css</code> or <code>main.js</code>. It copies them verbatim from references/. Its only job is to write the module HTML content. This keeps the design consistent and the code working.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Spot the Bug</h3>
+    <p>The skill has a common pitfall. Can you find it?</p>
+
+    <div class="quiz-container" id="quiz-m5">
+      <div class="quiz-question-block"
+           data-correct="option-c"
+           data-explanation-right="Exactly! Since tooltips use position: fixed and are appended to document.body, they break out of the translation block's overflow: hidden. This is explicitly mentioned in gotchas.md as the #1 bug."
+           data-explanation-wrong="Think about what happens when a tooltip appears inside a container with hidden overflow.">
+        <h3 class="quiz-question">Why do tooltips use <code>position: fixed</code> instead of <code>position: absolute</code>?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="option-a" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>Fixed is faster than absolute</span>
+          </button>
+          <button class="quiz-option" data-value="option-b" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>So the tooltip follows scrolling</span>
+          </button>
+          <button class="quiz-option" data-value="option-c" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>To avoid being clipped by parent containers with overflow: hidden</span>
+          </button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+      <button class="quiz-check-btn" onclick="checkQuiz('quiz-m5')">Check Answer</button>
+      <button class="quiz-reset-btn" onclick="resetQuiz('quiz-m5')">Try Again</button>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Big Picture</h3>
+    <p>Let's look at the complete architecture:</p>
+
+    <div class="arch-diagram">
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Input</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="A local project folder or GitHub repository that you want to learn about">
+            <div class="arch-icon">📂</div>
+            <span>Codebase</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Processing</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI reads source files, traces data flows, and identifies all components and patterns">
+            <div class="arch-icon">📖</div>
+            <span>Analyze</span>
+          </div>
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI structures 4-6 modules, from user experience down to internal architecture">
+            <div class="arch-icon">📐</div>
+            <span>Design Curriculum</span>
+          </div>
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI writes HTML module files using reference CSS, JS, and HTML patterns">
+            <div class="arch-icon">✍️</div>
+            <span>Write Modules</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Output</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The complete course — a single HTML file that works offline in any browser">
+            <div class="arch-icon">📚</div>
+            <span>index.html</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-description">Click any component to learn what it does</div>
+    </div>
+  </div>
+
+  <div class="screen animate-in" style="text-align: center; padding: var(--space-12) 0;">
+    <h2 class="module-title">You've Completed the Course! 🎉</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-top: var(--space-4);">You now understand how codebase-to-course works — from file structure to build process, design philosophy to the interactive engine.</p>
+    <p style="color: var(--color-text-muted); margin-top: var(--space-6);">This course was generated by the skill itself. That's the power of it.</p>
+  </div>
+
+</div>
+</section>
+  </main>
+
+</body>
+</html>

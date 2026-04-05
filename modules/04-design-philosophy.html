@@ -1,0 +1,138 @@
+<section class="module" id="module-4" style="background: var(--color-bg-warm);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">04</span>
+    <h2 class="module-title">Design Philosophy</h2>
+    <p class="module-subtitle">Warm, visual, metaphor-rich. Everything designed for someone who's never opened a code file.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Build First, Understand Later</h3>
+    <p>This skill <strong>inverts traditional education</strong>. Instead of years of theory before touching real code, you start with something that already works — then peel back the layers.</p>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">🏗️</div>
+      <div class="callout-content">
+        <strong class="callout-title">The Metaphor</strong>
+        <p>Think of it like taking apart a watch. You already know it tells time. Now you open it up to see the gears — each one makes sense in context because you know what the whole thing does.</p>
+      </div>
+    </div>
+
+    <div class="flow-steps animate-in">
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-error)">❌</div>
+        <p><strong>Old Way</strong><br>Memorize concepts → maybe build something → most people quit</p>
+      </div>
+      <div class="flow-arrow">vs</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-success)">✅</div>
+        <p><strong>This Way</strong><br>Build something → see it work → now understand the how</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Show, Don't Tell</h3>
+    <p>Every screen is at least <strong>50% visual</strong>. Text blocks are limited to 2-3 sentences. If something can be a diagram, animation, or interactive element — it shouldn't be a paragraph.</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">The Rule</span>
+<pre><code><span class="code-line"><span class="code-comment">// ❌ BAD — wall of text</span></span>
+<span class="code-line">The extension consists of multiple</span>
+<span class="code-line">files including a manifest, content</span>
+<span class="code-line">script, service worker, popup HTML...</span>
+<span class="code-line"><span class="code-comment">// (20 more lines of explanation)</span></span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// ✅ GOOD — use a file tree</span></span>
+<span class="code-line"><span class="code-keyword">Use</span> <span class="code-function">visual file tree</span></span>
+<span class="code-line"><span class="code-keyword">with</span> <span class="code-string">descriptions</span></span>
+<span class="code-line"><span class="code-keyword">instead</span> <span class="code-keyword">of</span> <span class="code-string">paragraphs</span></span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">WHY THIS MATTERS</span>
+        <div class="translation-lines">
+          <p class="tl">Dense paragraphs overwhelm non-technical readers. They look like homework.</p>
+          <p class="tl"></p>
+          <p class="tl">Visual structures like file trees let readers scan and understand in seconds.</p>
+          <p class="tl">The gotchas.md file literally lists "Walls of Text" as the #1 mistake to avoid.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Design Identity</h3>
+    <p>The visual style has <strong>strong opinions</strong> — no generic purple gradients:</p>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">🌅</div>
+        <h4 class="pattern-title">Warm Palette</h4>
+        <p class="pattern-desc">Off-white backgrounds like aged paper, warm grays. Feels like a developer's notebook.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">✏️</div>
+        <h4 class="pattern-title">Distinctive Type</h4>
+        <p class="pattern-desc">Bricolage Grotesque for headings — bold and geometric. Never Inter or Roboto.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">🎯</div>
+        <h4 class="pattern-title">One Accent Color</h4>
+        <p class="pattern-desc">Vermillion, coral, teal, amber, or forest. One confident accent, not a rainbow.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">💻</div>
+        <h4 class="pattern-title">Dark Code Blocks</h4>
+        <p class="pattern-desc">Catppuccin-inspired syntax highlighting on deep indigo-charcoal. Feels like a real IDE.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">No Recycled Metaphors</h3>
+    <p>Each concept gets a <strong>unique metaphor</strong> that fits organically. The "restaurant" metaphor is banned — it's been overused to death.</p>
+
+    <div class="badge-list animate-in">
+      <div class="badge-item">
+        <code class="badge-code">Database</code>
+        <span class="badge-desc">→ A library with a card catalog system</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Authentication</code>
+        <span class="badge-desc">→ A bouncer checking IDs at the door</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Rate Limiting</code>
+        <span class="badge-desc">→ A nightclub with a capacity limit</span>
+      </div>
+      <div class="badge-item">
+        <code class="badge-code">Cache</code>
+        <span class="badge-desc">→ Keeping leftovers instead of cooking every meal from scratch</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Quizzes Test Doing, Not Knowing</h3>
+    <p>No "What does API stand for?" Instead:</p>
+
+    <div class="scenario-block">
+      <div class="scenario-context">
+        <span class="scenario-label">Real Quiz Style</span>
+        <p>A user reports stale data after switching pages. Where would you look first?</p>
+      </div>
+    </div>
+
+    <div class="callout callout-warning animate-in">
+      <div class="callout-icon">⚠️</div>
+      <div class="callout-content">
+        <strong class="callout-title">Original Code Only</strong>
+        <p>Code snippets are <strong>never modified or simplified</strong>. The learner should be able to open the actual file and see the exact same code they learned from. This builds real confidence.</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>

@@ -1,0 +1,219 @@
+<section class="module" id="module-5" style="background: var(--color-bg);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">05</span>
+    <h2 class="module-title">The Interactive Engine</h2>
+    <p class="module-subtitle">A single 14KB JavaScript file powers every quiz, animation, and interaction. No frameworks, no dependencies.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">One File Does Everything</h3>
+    <p>The entire interactive experience is driven by <span class="term" data-definition="main.js is a single JavaScript file that handles all interactivity — navigation, quizzes, chat animations, drag-and-drop, flow animations, and more.">main.js</span>. It doesn't use React, Vue, or any framework. Just vanilla JavaScript with smart auto-detection:</p>
+
+    <div class="pattern-cards">
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-1)">
+        <div class="pattern-icon" style="background: var(--color-actor-1)">📍</div>
+        <h4 class="pattern-title">Auto-Detect</h4>
+        <p class="pattern-desc">Scans the page for class names like .chat-window, .flow-animation, .quiz-container — and activates the right engine for each.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-2)">
+        <div class="pattern-icon" style="background: var(--color-actor-2)">🎬</div>
+        <h4 class="pattern-title">Scroll Animations</h4>
+        <p class="pattern-desc">IntersectionObserver reveals content as you scroll down, with staggered children animations.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-3)">
+        <div class="pattern-icon" style="background: var(--color-actor-3)">📖</div>
+        <h4 class="pattern-title">Glossary Tooltips</h4>
+        <p class="pattern-desc">position: fixed tooltips appended to document.body so they're never clipped by overflow containers.</p>
+      </div>
+      <div class="pattern-card" style="border-top: 3px solid var(--color-actor-4)">
+        <div class="pattern-icon" style="background: var(--color-actor-4)">📱</div>
+        <h4 class="pattern-title">Mobile Support</h4>
+        <p class="pattern-desc">Touch events for drag-and-drop, responsive grid layouts, mobile-first design throughout.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">How Auto-Detection Works</h3>
+    <p>The skill uses <span class="term" data-definition="querySelectorAll is a built-in browser function that finds all HTML elements matching a CSS selector — like finding all elements with a certain class name.">querySelectorAll</span> to find components by their class name and wire them up automatically:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">main.js</span>
+<pre><code><span class="code-line"><span class="code-comment">// Find every chat window</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.chat-window'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initChat</span>(el));</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// Find every flow animation</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.flow-animation'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initFlow</span>(el));</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-comment">// Find every drag-and-drop</span></span>
+<span class="code-line"><span class="code-function">$$</span>(<span class="code-string">'.dnd-container'</span>)</span>
+<span class="code-line">  .<span class="code-function">forEach</span>(el => <span class="code-function">initDnD</span>(el));</span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Find every element with the "chat window" class...</p>
+          <p class="tl">...and run the chat engine on each one.</p>
+          <p class="tl"></p>
+          <p class="tl">Find every flow animation element...</p>
+          <p class="tl">...and initialize the flow animation engine.</p>
+          <p class="tl"></p>
+          <p class="tl">Same pattern for drag-and-drop containers.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See It in Action — Chat Engine</h3>
+    <p>The group chat engine creates an iMessage-style conversation between components. Watch:</p>
+
+    <div class="chat-window" id="chat-engine-demo">
+      <div class="chat-messages">
+        <div class="chat-message" style="display:none" data-msg="0" data-sender="html">
+          <div class="chat-avatar" style="background: var(--color-actor-1)">H</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-1)">HTML Structure</span>
+            <p>I define the layout and content. I'm the skeleton.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="1" data-sender="css">
+          <div class="chat-avatar" style="background: var(--color-actor-2)">C</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-2)">CSS Styles</span>
+            <p>I take that skeleton and make it beautiful. Colors, spacing, animations — all me.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="2" data-sender="js">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">J</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">JavaScript Engine</span>
+            <p>And I bring it alive! I scan for my class names, wire up event listeners, and make everything interactive.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="3" data-sender="js">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">J</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">JavaScript Engine</span>
+            <p>Best part? I don't need you to call me. I auto-detect everything on page load. Just drop the right class name and I handle it.</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-typing" id="chat-typing" style="display:none">
+        <div class="chat-avatar" id="chat-engine-demo-typing-avatar">?</div>
+        <div class="chat-typing-dots">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+      <div class="chat-controls">
+        <button class="btn chat-next-btn">Next</button>
+        <button class="btn chat-all-btn">Play All</button>
+        <button class="btn chat-reset-btn">Replay</button>
+        <span class="chat-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Never Regenerate CSS or JS</h3>
+    <p>One of the most important rules in the skill:</p>
+
+    <div class="callout callout-accent animate-in">
+      <div class="callout-icon">🔒</div>
+      <div class="callout-content">
+        <strong class="callout-title">Critical Rule</strong>
+        <p>The AI <strong>never regenerates</strong> <code>styles.css</code> or <code>main.js</code>. It copies them verbatim from references/. Its only job is to write the module HTML content. This keeps the design consistent and the code working.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Spot the Bug</h3>
+    <p>The skill has a common pitfall. Can you find it?</p>
+
+    <div class="quiz-container" id="quiz-m5">
+      <div class="quiz-question-block"
+           data-correct="option-c"
+           data-explanation-right="Exactly! Since tooltips use position: fixed and are appended to document.body, they break out of the translation block's overflow: hidden. This is explicitly mentioned in gotchas.md as the #1 bug."
+           data-explanation-wrong="Think about what happens when a tooltip appears inside a container with hidden overflow.">
+        <h3 class="quiz-question">Why do tooltips use <code>position: fixed</code> instead of <code>position: absolute</code>?</h3>
+        <div class="quiz-options">
+          <button class="quiz-option" data-value="option-a" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>Fixed is faster than absolute</span>
+          </button>
+          <button class="quiz-option" data-value="option-b" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>So the tooltip follows scrolling</span>
+          </button>
+          <button class="quiz-option" data-value="option-c" onclick="selectOption(this)">
+            <div class="quiz-option-radio"></div>
+            <span>To avoid being clipped by parent containers with overflow: hidden</span>
+          </button>
+        </div>
+        <div class="quiz-feedback"></div>
+      </div>
+      <button class="quiz-check-btn" onclick="checkQuiz('quiz-m5')">Check Answer</button>
+      <button class="quiz-reset-btn" onclick="resetQuiz('quiz-m5')">Try Again</button>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Big Picture</h3>
+    <p>Let's look at the complete architecture:</p>
+
+    <div class="arch-diagram">
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Input</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="A local project folder or GitHub repository that you want to learn about">
+            <div class="arch-icon">📂</div>
+            <span>Codebase</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Processing</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI reads source files, traces data flows, and identifies all components and patterns">
+            <div class="arch-icon">📖</div>
+            <span>Analyze</span>
+          </div>
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI structures 4-6 modules, from user experience down to internal architecture">
+            <div class="arch-icon">📐</div>
+            <span>Design Curriculum</span>
+          </div>
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The AI writes HTML module files using reference CSS, JS, and HTML patterns">
+            <div class="arch-icon">✍️</div>
+            <span>Write Modules</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-zone">
+        <h4 class="arch-zone-label">Output</h4>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <div class="arch-component" onclick="showArchDesc(this)" data-desc="The complete course — a single HTML file that works offline in any browser">
+            <div class="arch-icon">📚</div>
+            <span>index.html</span>
+          </div>
+        </div>
+      </div>
+      <div class="arch-description">Click any component to learn what it does</div>
+    </div>
+  </div>
+
+  <div class="screen animate-in" style="text-align: center; padding: var(--space-12) 0;">
+    <h2 class="module-title">You've Completed the Course! 🎉</h2>
+    <p style="font-size: var(--text-lg); color: var(--color-text-secondary); margin-top: var(--space-4);">You now understand how codebase-to-course works — from file structure to build process, design philosophy to the interactive engine.</p>
+    <p style="color: var(--color-text-muted); margin-top: var(--space-6);">This course was generated by the skill itself. That's the power of it.</p>
+  </div>
+
+</div>
+</section>

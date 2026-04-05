@@ -1,0 +1,226 @@
+<section class="module" id="module-3" style="background: var(--color-bg);">
+<div class="module-content">
+
+  <header class="module-header animate-in">
+    <span class="module-number">03</span>
+    <h2 class="module-title">The Build Process</h2>
+    <p class="module-subtitle">Four phases from raw code to beautiful course. Think of it like cooking: prep, plan, cook, serve.</p>
+  </header>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">The Four Phases</h3>
+    <p>Every course goes through the same journey:</p>
+
+    <div class="flow-steps animate-in">
+      <div class="flow-step">
+        <div class="flow-step-num">1</div>
+        <p><strong>Analyze</strong><br>Read every file</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">2</div>
+        <p><strong>Design</strong><br>Plan the modules</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">3</div>
+        <p><strong>Build</strong><br>Write HTML modules</p>
+      </div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step">
+        <div class="flow-step-num">4</div>
+        <p><strong>Assemble</strong><br>Cat → index.html</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 1: Analyze the Codebase</h3>
+    <p>Before writing anything, the skill <strong>deeply reads the target codebase</strong>. It's like a detective studying a crime scene:</p>
+
+    <div class="icon-rows">
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-1)">🕵️</div>
+        <div>
+          <strong>Identify the Actors</strong>
+          <p>What are the main components, services, and modules?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-2)">🔗</div>
+        <div>
+          <strong>Trace Data Flows</strong>
+          <p>How does information move between parts?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-3)">🗺️</div>
+        <div>
+          <strong>Map the User Journey</strong>
+          <p>What happens end-to-end when someone uses the app?</p>
+        </div>
+      </div>
+      <div class="icon-row">
+        <div class="icon-circle" style="background: var(--color-actor-4)">🧩</div>
+        <div>
+          <strong>Find the Clever Bits</strong>
+          <p>Caching, lazy loading, error handling — the patterns worth teaching</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="callout callout-info animate-in">
+      <div class="callout-icon">🤖</div>
+      <div class="callout-content">
+        <strong class="callout-title">AI Behavior</strong>
+        <p>The skill figures out what the app does by reading the README and entry points. It doesn't ask the user — they may not know either!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 2: Design the Curriculum</h3>
+    <p>The course is structured as <strong>4-6 modules</strong> that zoom in progressively:</p>
+
+    <div class="chat-window" id="chat-curriculum">
+      <div class="chat-messages">
+        <div class="chat-message" style="display:none" data-msg="0" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-1)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-1)">Design Phase</span>
+            <p>Module 1: What does this app do? Start with the user experience.</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="1" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-2)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-2)">Design Phase</span>
+            <p>Module 2: Meet the components — who are the actors?</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="2" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-3)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-3)">Design Phase</span>
+            <p>Module 3: How do the pieces talk to each other?</p>
+          </div>
+        </div>
+        <div class="chat-message" style="display:none" data-msg="3" data-sender="designer">
+          <div class="chat-avatar" style="background: var(--color-actor-4)">D</div>
+          <div class="chat-bubble">
+            <span class="chat-sender" style="color: var(--color-actor-4)">Design Phase</span>
+            <p>Module 4-6: External APIs, clever patterns, debugging tips.</p>
+          </div>
+        </div>
+      </div>
+      <div class="chat-typing" id="chat-typing" style="display:none">
+        <div class="chat-avatar" id="chat-curriculum-typing-avatar">?</div>
+        <div class="chat-typing-dots">
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+          <span class="typing-dot"></span>
+        </div>
+      </div>
+      <div class="chat-controls">
+        <button class="btn chat-next-btn">Next</button>
+        <button class="btn chat-all-btn">Play All</button>
+        <button class="btn chat-reset-btn">Replay</button>
+        <span class="chat-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 3: Build — Sequential vs Parallel</h3>
+    <p>Here's where it gets clever. The skill chooses its strategy based on complexity:</p>
+
+    <div class="translation-block animate-in">
+      <div class="translation-code">
+        <span class="translation-label">SKILL.md</span>
+<pre><code><span class="code-line"><span class="code-keyword">Simple</span> codebase → <span class="code-keyword">sequential</span></span>
+<span class="code-line">  Write modules one at a time</span>
+<span class="code-line"></span>
+<span class="code-line"><span class="code-keyword">Complex</span> codebase → <span class="code-keyword">parallel</span></span>
+<span class="code-line">  Write module briefs first</span>
+<span class="code-line">  Dispatch to sub-agents</span>
+<span class="code-line">  Batch of up to 3 at once</span></code></pre>
+      </div>
+      <div class="translation-english">
+        <span class="translation-label">PLAIN ENGLISH</span>
+        <div class="translation-lines">
+          <p class="tl">Small, simple projects get the straightforward approach...</p>
+          <p class="tl">The AI writes each module in order, checking quality as it goes.</p>
+          <p class="tl"></p>
+          <p class="tl">Big, complex projects trigger the smart approach...</p>
+          <p class="tl">Write briefs for each module first, so writing agents never need to re-read the whole codebase.</p>
+          <p class="tl">Then split the work across multiple AI sub-agents — up to 3 at the same time.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">See the Data Flow</h3>
+    <p>Here's how the build process actually works step by step:</p>
+
+    <div class="flow-animation" data-steps='[
+  {"highlight":"flow-actor-1","label":"You point it at a codebase"},
+  {"highlight":"flow-actor-1","packet":true,"from":"actor-1","to":"actor-2","label":"The skill reads all the source files"},
+  {"highlight":"flow-actor-2","label":"The AI analyzes and designs the curriculum"},
+  {"highlight":"flow-actor-2","packet":true,"from":"actor-2","to":"actor-3","label":"It writes module HTML files"},
+  {"highlight":"flow-actor-3","label":"build.sh assembles everything into index.html"},
+  {"highlight":"flow-actor-3","label":"You open it in your browser — done!"}
+]'>
+      <div class="flow-actors">
+        <div class="flow-actor" id="flow-actor-1">
+          <div class="flow-actor-icon">👤</div>
+          <span>You</span>
+        </div>
+        <div class="flow-actor" id="flow-actor-2">
+          <div class="flow-actor-icon">🤖</div>
+          <span>The Skill</span>
+        </div>
+        <div class="flow-actor" id="flow-actor-3">
+          <div class="flow-actor-icon">📚</div>
+          <span>The Course</span>
+        </div>
+      </div>
+      <div class="flow-packet" id="flow-packet"></div>
+      <div class="flow-step-label" id="flow-label">Click "Next Step" to begin</div>
+      <div class="flow-controls">
+        <button class="btn flow-next-btn">Next Step</button>
+        <button class="btn flow-reset-btn">Restart</button>
+        <span class="flow-progress"></span>
+      </div>
+    </div>
+  </div>
+
+  <div class="screen animate-in">
+    <h3 class="screen-heading">Phase 4: Assemble & Review</h3>
+    <p>The final step is dead simple — run <code>bash build.sh</code> and it concatenates:</p>
+
+    <div class="flow-steps">
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-1)">_base.html</div>
+        <p>HTML shell with fonts, CSS, JS links</p>
+      </div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-2)">modules/*.html</div>
+        <p>Each module's content in order</p>
+      </div>
+      <div class="flow-arrow">+</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-actor-3)">_footer.html</div>
+        <p>Closing body and html tags</p>
+      </div>
+      <div class="flow-arrow">=</div>
+      <div class="flow-step">
+        <div class="flow-step-num" style="background: var(--color-success)">index.html</div>
+        <p>The complete course!</p>
+      </div>
+    </div>
+  </div>
+
+</div>
+</section>
